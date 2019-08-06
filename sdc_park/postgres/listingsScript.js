@@ -15,10 +15,12 @@ const inputRow = (start, end) => {
 // add rows generated to CSV file
 const appendCSV = (m) => {
   for (let i = 0; i < m; i++) {
-    listings = inputRow(i * 100000, i * 100000 + 100000)
+    listings = inputRow(i * 10000, i * 10000 + 10000)
     appendFileSync(__dirname + '/listings.csv', listings)
   }
 }
 
 // invoke in sets of 100,000 due to javascript heap issue
-appendCSV(100)
+appendCSV(10)
+
+// 100k

@@ -11,9 +11,10 @@ const inputRow = (start, end) => {
 
 const appendCSV = (m) => {
   for (let i = 0; i < m; i++) {
-    users = inputRow(i * 10000, i * 10000 + 10000)
+    users = inputRow(i * 1000, i * 1000 + 1000)
     appendFileSync(__dirname + '/users.csv', users)
   }
 }
 
 appendCSV(1)
+// 1k

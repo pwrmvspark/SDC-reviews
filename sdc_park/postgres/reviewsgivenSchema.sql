@@ -13,4 +13,6 @@ CREATE TABLE reviewsgiven (
   value_rating FLOAT NOT NULL
 );
 
+--  create index speedtest on reviewsgiven (listing_id);
+
 -- \COPY reviewsgiven FROM '/Users/pwrmvs/SDC-reviews/sdc_park/postgres/reviewsgiven.csv' DELIMITER ',' CSV HEADER;
