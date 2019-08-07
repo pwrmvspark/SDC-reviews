@@ -1,12 +1,15 @@
 const Pool = require('pg').Pool
 const pool = new Pool({
-  // user: 'me',
-  host: 'localhost',
+  user: 'postgres',
+  host: 'ec2-52-90-105-154.compute-1.amazonaws.com',
   database: 'reviews',
-  // password: 'password',
+  password: 'docker',
   port: 5432,
   max: 40
 })
+
+//ec2-52-90-105-154.compute-1.amazonaws.com
+//use this for 'host' field above
 
 const getReviewsById = (request, response) => {
   const id = parseInt(request.params.id)
