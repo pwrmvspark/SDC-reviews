@@ -2,7 +2,7 @@ FROM node:8
 
 RUN mkdir -p /src/sdc
 
-WORKDIR src/sdc
+WORKDIR /src/sdc
 
 COPY . /src/sdc
 
