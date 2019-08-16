@@ -2,3 +2,4 @@ node_modules/
 
 #CSV File
 *.csv
+.rtf
