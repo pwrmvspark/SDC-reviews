@@ -11,6 +11,15 @@ app.use(bodyParser.json())
 
 app.get('/listings/:id', db.getReviewsById)
 
+app.use((req, res, next) => {
+  res.sendStatus(404)
+})
+
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.status(500).send(err.message)
+})
+
 app.listen(port, ()=> {
   console.log(`listening on port ${port}`)
 })
