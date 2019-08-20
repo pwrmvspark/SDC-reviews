@@ -5,7 +5,7 @@ const pool = new Pool({
   database: 'reviews',
   password: 'docker',
   port: 5432,
-  max: 40 // this might need to change for server efficiencyq
+  max: 40 // this might need to change for server efficiency
 })
 
 //ec2-52-90-105-154.compute-1.amazonaws.com
@@ -13,9 +13,7 @@ const pool = new Pool({
 
 const getReviewsById = (request, response) => {
   const id = parseInt(request.params.id)
-  // console.log(request.params.id)
   pool.query('SELECT * FROM reviewsgiven WHERE listing_id = $1', [id], (error, results) => {
-    // console.log('WAT', error, result);
     
     if (error) {
       console.log(error + ' this is your error dummy')
