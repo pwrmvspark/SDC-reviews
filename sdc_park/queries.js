@@ -5,7 +5,7 @@ const pool = new Pool({
   database: 'reviews',
   password: 'docker',
   port: 5432,
-  max: 40 // this might need to change for server efficiency
+  max: 200 // this might need to change for server efficiency
 })
 
 //ec2-52-90-105-154.compute-1.amazonaws.com
