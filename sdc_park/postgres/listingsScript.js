@@ -1,5 +1,4 @@
 // write a function that generates my data to import into my csv file
-
 const faker = require('faker')
 const { appendFileSync } = require('fs')
 
@@ -22,5 +21,3 @@ const appendCSV = (m) => {
 
 // invoke in sets of 100,000 due to javascript heap issue
 appendCSV(10)
-
-// 100k

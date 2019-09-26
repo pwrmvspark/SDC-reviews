@@ -5,18 +5,14 @@ const pool = new Pool({
   database: 'reviews',
   password: 'docker',
   port: 5432,
-  max: 200 // this might need to change for server efficiency
+  max: 200
 })
-
-//ec2-52-90-105-154.compute-1.amazonaws.com
-//use this for 'host' field above
 
 const getReviewsById = (request, response) => {
   const id = parseInt(request.params.id)
   pool.query('SELECT * FROM reviewsgiven WHERE listing_id = $1', [id], (error, results) => {
-    
     if (error) {
-      console.log(error + ' this is your error dummy')
+      console.log(error + ' please review this error')
       return response.send(500)
     }
     response.status(200).json(results)

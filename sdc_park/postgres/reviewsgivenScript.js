@@ -17,4 +17,3 @@ const appendCSV = (m) => {
 }
 
 appendCSV(200)
-// 1 mill

@@ -11,5 +11,4 @@ scenarios:
     - get:
         url: "/listings/55555"
 
-
 # artillery run artillery.yml

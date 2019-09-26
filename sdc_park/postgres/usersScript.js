@@ -18,4 +18,3 @@ const appendCSV = (m) => {
 }
 
 appendCSV(1)
-// 1k
